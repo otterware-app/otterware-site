@@ -3,145 +3,55 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Otterware</title>
+    <title>Otterware · Calm, fast software</title>
     <meta
       name="description"
-      content="Calm, fast software for people and their agents: Otter Mail, Otter Drive and Otter Code."
+      content="Otterware makes quiet apps for your mail, your documents and your coding agents: Otter Mail, Otter Drive and Otter Code."
     />
     <meta property="og:title" content="Otterware" />
-    <meta property="og:description" content="Calm, fast software for people and their agents." />
+    <meta property="og:description" content="Calm, fast software." />
     <meta property="og:image" content="https://otterware.app/otter.jpg" />
     <link rel="icon" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <style>
-      :root {
-        color-scheme: dark;
-        --bg: #070604;
-        --fg: #f3e9de;
-        --accent: #e7b27f;
-        --muted: rgba(243, 233, 222, 0.56);
-        --line: rgba(231, 178, 127, 0.14);
-      }
-      * {
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        margin: 0;
-      }
-      body {
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background: var(--bg);
-        color: var(--fg);
-        font:
-          16px/1.6 Inter,
-          ui-sans-serif,
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          sans-serif;
-        -webkit-font-smoothing: antialiased;
-      }
-      main {
-        width: 100%;
-        max-width: 34rem;
-        padding: 4rem 1.5rem;
-      }
-      header {
-        text-align: center;
-        margin-bottom: 2.5rem;
-      }
-      header img {
-        display: block;
-        margin: 0 auto 0.75rem;
-      }
-      h1 {
-        margin: 0;
-        font-size: 1.75rem;
-        font-weight: 600;
-        letter-spacing: -0.02em;
-      }
-      header p {
-        margin: 0.25rem 0 0;
-        color: var(--muted);
-      }
-      nav a {
-        display: block;
-        padding: 1.1rem 0.25rem;
-        border-top: 1px solid var(--line);
-        color: inherit;
-        text-decoration: none;
-      }
-      nav a:last-child {
-        border-bottom: 1px solid var(--line);
-      }
-      nav a:focus-visible {
-        outline: 2px solid var(--accent);
-        outline-offset: 2px;
-      }
-      nav div {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 1rem;
-      }
-      nav b {
-        font-weight: 600;
-      }
-      nav span {
-        color: var(--muted);
-        font-size: 0.875rem;
-      }
-      nav a:hover b,
-      nav a:hover span {
-        color: var(--accent);
-      }
-      nav p {
-        margin: 0.15rem 0 0;
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-      footer {
-        margin-top: 2rem;
-        text-align: center;
-        font-size: 0.875rem;
-      }
-      footer a {
-        color: var(--muted);
-        text-decoration: none;
-      }
-      footer a:hover {
-        color: var(--fg);
-      }
-    </style>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <main>
-      <header>
-        <img src="/otter.jpg" width="160" height="160" alt="" />
-        <h1>Otterware</h1>
-        <p>Calm, fast software for people and their agents.</p>
+    <div class="wrap">
+      <nav class="nav">
+        <a class="logo" href="/"><img src="/logo.png" width="26" height="26" alt="" />Otterware</a>
+        <div class="links"><a href="https://github.com/otterware-app">GitHub</a></div>
+      </nav>
+    </div>
+
+    <main class="wrap">
+      <header class="hero">
+        <img src="/otter.jpg" width="640" height="640" alt="" />
+        <h1>
+          <b>Calm, fast software.</b> Otterware makes quiet apps for your mail, your documents and
+          your coding agents.
+        </h1>
       </header>
 
-      <nav aria-label="Apps">
+      <section class="apps">
         <a href="https://mail.otterware.app">
-          <div><b>Otter Mail</b><span>mail.otterware.app &rarr;</span></div>
-          <p>Email, calm and fast. Gmail and IMAP, on Mac, web and iOS.</p>
+          <img src="/apps/mail.png" width="48" height="48" alt="" />
+          <h2>Otter Mail</h2>
+          <p>Email, calm and fast. Gmail and IMAP on your Mac, in your browser and on iOS.</p>
+          <span>mail.otterware.app &rarr;</span>
         </a>
         <a href="https://drive.otterware.app">
-          <div><b>Otter Drive</b><span>drive.otterware.app &rarr;</span></div>
-          <p>Private, versioned documents and artifacts for people and agents.</p>
+          <img src="/apps/drive.png" width="48" height="48" alt="" />
+          <h2>Otter Drive</h2>
+          <p>Private, versioned documents and artifacts, for people and their agents.</p>
+          <span>drive.otterware.app &rarr;</span>
         </a>
         <a href="https://code.otterware.dev">
-          <div><b>Otter Code</b><span>code.otterware.dev &rarr;</span></div>
-          <p>Your coding agents, from any device.</p>
+          <img src="/apps/code.png" width="48" height="48" alt="" />
+          <h2>Otter Code</h2>
+          <p>The coding agents on your machines, from your desktop, your browser or your phone.</p>
+          <span>code.otterware.dev &rarr;</span>
         </a>
-      </nav>
-
-      <footer><a href="https://github.com/otterware-app">GitHub</a></footer>
+      </section>
     </main>
   </body>
 </html>
