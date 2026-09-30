@@ -1,0 +1,9 @@
+// otterware.app: the front door to Otterware's apps, one static page in public/.
+// Cloudflare Workers Builds deploys it on pushes to main (`pnpm run deploy`).
+{
+  "name": "otterware-site",
+  "compatibility_date": "2026-09-01",
+  "assets": { "directory": "./public" },
+  "workers_dev": false,
+  "routes": [{ "pattern": "otterware.app", "custom_domain": true }],
+}
