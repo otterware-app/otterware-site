@@ -1,10 +1,16 @@
 {
   "name": "otterware-site",
   "private": true,
-  "description": "otterware.app: the front door to Otterware's apps.",
+  "description": "otterware.app: Otterware's apps, each with its page, and Otter Mail's changelog.",
+  "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "dev": "node --watch scripts/dev.ts",
+    "build": "node scripts/build.ts",
+    "deploy": "wrangler deploy",
+    "test": "node --test scripts/*.test.ts"
+  },
+  "dependencies": {
+    "marked": "^18.0.14"
   },
   "devDependencies": {
     "wrangler": "^4.141.0"
