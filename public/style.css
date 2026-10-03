@@ -117,18 +117,12 @@ html {
   font-size: 0.8125rem;
 }
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
   color: var(--fg);
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   text-decoration: none;
   white-space: nowrap;
-}
-.logo img {
-  border-radius: 6px;
 }
 .nav .links {
   display: flex;
@@ -754,10 +748,6 @@ html {
   .nav .apps {
     gap: 1rem;
     margin-left: 0;
-  }
-  .logo {
-    font-size: 0;
-    gap: 0;
   }
   .product-bar .btn {
     display: none;
