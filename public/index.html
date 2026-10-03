@@ -3,45 +3,134 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Otterware</title>
+    <title>Otterware · Calm, fast software</title>
     <meta
       name="description"
-      content="Otterware makes quiet apps for your mail, your documents and your coding agents: Otter Mail, Otter Drive and Otter Code."
+      content="Otterware makes calm, fast apps for your mail, your documents and your coding agents: Otter Mail, Otter Drive, and more to come. One Otter account for all of them."
     />
     <meta property="og:title" content="Otterware" />
     <meta property="og:description" content="Calm, fast software." />
-    <meta property="og:image" content="https://otterware.app/otter.jpg" />
+    <meta property="og:image" content="https://otterware.app/og.png" />
     <link rel="icon" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="stylesheet" href="/style.css" />
+    <script src="/office.js" defer></script>
+    <script src="/site.js" defer></script>
   </head>
-  <body>
+  <body class="landing">
+    <header class="top">
+      <div class="wrap">
+        <nav class="nav"></nav>
+      </div>
+    </header>
+
     <main>
-      <header>
-        <img src="/otter.jpg" width="640" height="640" alt="" />
-        <h1>Otterware</h1>
-        <p>Calm, fast software for your mail, your documents and your coding agents.</p>
+      <header class="hero">
+        <div class="wrap">
+          <div class="hero-copy">
+            <h1>
+              <b>Calm, fast software.</b> Quiet apps for your mail, your documents and your agents,
+              on your Mac, in your browser and on your phone. One Otter account for all of them.
+            </h1>
+            <p class="cta">
+              <a class="btn" href="/mail/">Otter Mail</a>
+              <a class="btn secondary" href="/drive/">Otter Drive</a>
+            </p>
+          </div>
+        </div>
       </header>
 
-      <nav aria-label="Apps">
-        <a href="https://mail.otterware.app">
-          <img src="/apps/mail.png" width="32" height="32" alt="" />
-          <div><b>Otter Mail</b><small>Email, calm and fast.</small></div>
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-        <a href="https://drive.otterware.app">
-          <img src="/apps/drive.png" width="32" height="32" alt="" />
-          <div><b>Otter Drive</b><small>Versioned documents for people and agents.</small></div>
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-        <a href="https://code.otterware.dev">
-          <img src="/apps/code.png" width="32" height="32" alt="" />
-          <div><b>Otter Code</b><small>Your coding agents, from any device.</small></div>
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-      </nav>
+      <figure class="office">
+        <canvas
+          role="img"
+          aria-label="Otter Mail as a small office: mail comes in through the wall from Gmail and IMAP, and the receptionist sorts it into the shredder, the label pigeonholes, or the tray for you. A courier walks it to your desk, where you file it or pass it to the agent, whose reply you send. Your Mac, your iPhone and the meeting room screen show the same inbox."
+        ></canvas>
+        <button type="button" aria-pressed="false">Pause</button>
+      </figure>
 
-      <footer><a href="https://github.com/otterware-app">GitHub</a></footer>
+      <div class="wrap">
+        <section class="suite" aria-labelledby="apps-title">
+          <h2 id="apps-title">The apps</h2>
+          <div class="app-grid">
+            <a class="app-card" href="/mail/">
+              <img
+                class="shot"
+                src="/mail/tour/agent.webp"
+                width="2400"
+                height="1501"
+                loading="lazy"
+                alt="Otter Mail with the agent panel open beside a conversation."
+              />
+              <div class="app-card-text">
+                <img src="/apps/mail.png" width="40" height="40" alt="" />
+                <div>
+                  <h3>Otter Mail</h3>
+                  <p>
+                    Email, calm and fast. Gmail and IMAP from a local cache, made for the keyboard,
+                    with an agent if you want one.
+                  </p>
+                </div>
+                <span class="arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a class="app-card" href="/drive/">
+              <img
+                class="shot"
+                src="/drive/tour/viewer.webp"
+                width="2400"
+                height="1500"
+                loading="lazy"
+                alt="Otter Drive with a team's drive open and an HTML report, the Q3 revenue review, in the viewer."
+              />
+              <div class="app-card-text">
+                <img src="/apps/drive.png" width="40" height="40" alt="" />
+                <div>
+                  <h3>Otter Drive</h3>
+                  <p>
+                    Versioned documents for people and agents. Reports, notes and sheets, every
+                    version kept, published from the browser or the command line.
+                  </p>
+                </div>
+                <span class="arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+          </div>
+          <div class="coming">
+            <div class="app-row">
+              <img src="/apps/code.png" width="32" height="32" alt="" />
+              <div>
+                <h3>Otter Code</h3>
+                <p>Your coding agents, from any device.</p>
+              </div>
+              <span class="soon-badge">Soon</span>
+            </div>
+            <div class="app-row">
+              <img src="/apps/calendar.svg" width="32" height="32" alt="" />
+              <div>
+                <h3>Otter Calendar</h3>
+                <p>Every Google calendar in one view, with an assistant.</p>
+              </div>
+              <span class="soon-badge">Soon</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy">
+          <h2>One account, everywhere</h2>
+          <p>
+            Sign in once with Google, and your Otter account opens every app, on every device. It
+            knows who you are and nothing more: your mail stays in Otter Mail and your files in
+            Otter Drive. No analytics, no tracking.
+          </p>
+          <p class="cta">
+            <a class="text-link" href="https://accounts.otterware.app/otter/sign-in"
+              >Sign in to Otter <span aria-hidden="true">&rarr;</span></a
+            >
+          </p>
+        </section>
+
+        <footer></footer>
+      </div>
     </main>
   </body>
 </html>
