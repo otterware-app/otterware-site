@@ -20,17 +20,17 @@
         <article class="doc">
           <header>
             <h1>Privacy Policy</h1>
-            <p>Last updated: September 29, 2026</p>
+            <p>Last updated: October 4, 2026</p>
           </header>
 
           <p>
-            Otter Mail is an email app for macOS and the web, made by Christophe Kafrouni under the
+            Otter Mail is an email app for macOS, iPhone and the web, made by Christophe Kafrouni under the
             Otterware name. This policy explains what data Otter Mail accesses, where it goes, and
-            what control you have. In short: Otter Mail runs on your device (your Mac, or your
-            browser) and fetches your mail from Google directly; your mail never passes through our
-            server. If you sign in to an Otter account, our server learns which Gmail addresses you
-            use and when they change. In the web app, it also handles your Gmail sign-in (see
-            below).
+            what control you have. Otter Mail fetches and caches mail on your device. If you choose
+            to use the OpenRouter agent, your chat and mail returned by its tools are processed and
+            stored on our server and sent to OpenRouter and the selected model provider (see below).
+            If you sign in to an Otter account, our server also learns which Gmail addresses you
+            use and when they change. In the web app, it handles your Gmail sign-in.
           </p>
 
           <h2>Data Otter Mail accesses from your Google Account</h2>
@@ -70,9 +70,10 @@
           <h2>How the data is used and stored</h2>
           <ul>
             <li>
-              Data from Google is used only to provide Otter Mail's features to you, in the app on
-              your device. It is never sold, never used for advertising, and never used to train
-              artificial intelligence models.
+              Otterware uses data from Google only to provide Otter Mail's features to you. We do
+              not sell it, use it for advertising, or use it to train artificial intelligence models.
+              Optional agents process the content you provide and the content returned by their
+              tools, as described below.
             </li>
             <li>
               Your mail, labels and contact details are stored in a local database on your device,
@@ -129,7 +130,35 @@
             to this server whenever one of your mailboxes changes. The notification contains only
             the address and a change number, never the content of your mail; the server passes it on
             to your devices, which then fetch the change from Gmail themselves. Notifications are
-            not stored. Your mail and contacts never reach our server.
+            not stored. This notification path does not send mail content to our server. The
+            optional OpenRouter agent has a separate data path, described below.
+          </p>
+
+          <h2>The OpenRouter agent (optional)</h2>
+          <p>
+            You connect the agent with your own OpenRouter API key and use your own OpenRouter
+            account for billing. We store the key encrypted on Cloudflare, where Otter Mail's server
+            can decrypt it to make your requests. We do not send the key back to your devices.
+          </p>
+          <p>
+            When you use this agent, our server runs the agent and receives your prompts, attached
+            files and mail returned by tools on your connected device. Tool results can include
+            senders, recipients, subjects, message bodies, previews and attachments. We send the
+            relevant conversation to OpenRouter and the selected model provider. Mailbox passwords
+            and Gmail tokens are not sent to the agent server. The agent requires a connected app to
+            access mail and does not independently sync your entire mailbox.
+          </p>
+          <p>
+            We store chat history and tool results on Cloudflare so you can resume the chat on
+            another device. This history is not end-to-end encrypted: our server can read it. It
+            remains until you delete the chat or your Otter account. Disconnecting OpenRouter deletes
+            your saved key; signing out or removing a mailbox does not delete existing chat history.
+          </p>
+          <p>
+            We request OpenRouter providers that do not collect user data. OpenRouter and the model
+            provider still process the request under their own policies. You can review
+            <a href="https://openrouter.ai/privacy/">OpenRouter's privacy policy</a> and the selected
+            provider's policy before using the agent. Nothing is sent to this agent unless you use it.
           </p>
 
           <h2>The web app</h2>
@@ -163,21 +192,22 @@
             </li>
             <li>
               <strong>Your agent, only if you set one up.</strong> The optional agent runs through a
-              provider you install and sign in to yourself (Claude Code, Codex or Hermes). When you
+              provider you install or configure and sign in to yourself (Claude Code, Codex or Hermes). When you
               ask it something, the messages and mail content it needs are sent to that provider
               under your own account with them, and are subject to that provider's privacy policy.
               Nothing is sent to an agent unless you use it.
             </li>
             <li>
-              <strong>Otter Mail's server</strong>, only if you sign in to an Otter account (see
-              above).
+              <strong>Otter Mail's server</strong>, if you sign in to an Otter account, and
+              <strong>OpenRouter and the selected model provider</strong>, when you use the optional
+              OpenRouter agent (see above).
             </li>
             <li>
               <strong>GitHub</strong>, to check for app updates. This shares only your IP address
               and the app version, as any download does.
             </li>
           </ul>
-          <p>Otter Mail does not share your Google data with anyone else.</p>
+          <p>Otter Mail shares Google data only for the features and services described in this policy.</p>
 
           <h2>Google API Services User Data Policy</h2>
           <p>
@@ -204,8 +234,10 @@
               browser (web), removes all of the app's data on that device.
             </li>
             <li>
-              Signing out of your Otter account ends that device's session. To delete your Otter
-              account and everything our server stores about it, email us at the address below.
+              Signing out of your Otter account ends that device's session. Delete an agent chat
+              to remove its server-side history. Deleting your Otter account removes the agent key
+              and histories along with the account's other stored data. Contact us at the address
+              below if you need help deleting your account.
             </li>
           </ul>
 
