@@ -54,7 +54,9 @@
             <li>
               <strong>Calendar events</strong> (<code>calendar.events.owned</code>): to show
               calendar invitations you receive by email and to record your reply on your own
-              calendar when you accept or decline. Otter Mail touches only the events you answer.
+              primary calendar when you accept or decline. If you use an agent, its calendar tools
+              can also list, read, create, edit and delete events on that primary calendar when you
+              ask. Write tools request approval in the default supervised mode.
             </li>
             <li>
               <strong>Basic profile</strong> (<code>openid</code>, <code>email</code>,
@@ -142,8 +144,9 @@
           </p>
           <p>
             When you use this agent, our server runs the agent and receives your prompts, attached
-            files and mail returned by tools on your connected device. Tool results can include
-            senders, recipients, subjects, message bodies, previews and attachments. We send the
+            files and mail or calendar data returned by tools on your connected device. Tool results
+            can include senders, recipients, subjects, message bodies, previews, attachments and
+            event titles, times, locations, descriptions and attendees. We send the
             relevant conversation to OpenRouter and the selected model provider. Mailbox passwords
             and Gmail tokens are not sent to the agent server. The agent requires a connected app to
             access mail and does not independently sync your entire mailbox.
@@ -193,7 +196,7 @@
             <li>
               <strong>Your agent, only if you set one up.</strong> The optional agent runs through a
               provider you install or configure and sign in to yourself (Claude Code, Codex or Hermes). When you
-              ask it something, the messages and mail content it needs are sent to that provider
+              ask it something, the messages, mail content and calendar details it needs are sent to that provider
               under your own account with them, and are subject to that provider's privacy policy.
               Nothing is sent to an agent unless you use it.
             </li>
